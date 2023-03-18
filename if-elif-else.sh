@@ -37,7 +37,7 @@ elif [[ $resultado == [mM] ]]; then
     echo -n "Escribe un número: "
     read valor
 
-    if [ $valor -lt 5 -o $valor -gt 10 ]; then
+    if [ "$valor" -lt 5 ] || [ "$valor" -gt 10 ]; then
         echo "Tu numero está fuera  del rango [5, 10]"
     else
         echo "Tu numero está en el rango [5, 10]"
