@@ -3,7 +3,8 @@
 while true; do
   # Mostrar las carpetas en el directorio actual
   echo "Carpetas en el directorio actual:"
-  ls -d *
+  ls -d ./*  # o ls -d -- ./*
+
 
   # Preguntar al usuario qué acción desea realizar
   echo "Elija una opción:"
@@ -26,7 +27,7 @@ while true; do
       echo "La carpeta $carpeta no existe."
     fi
 
-  elif [ $opcion -eq 2 ]; then
+  elif [ "$opcion" -eq 2 ]; then
     # Preguntar al usuario qué archivo desea leer
     ls
     echo "Introduce el nombre del archivo que deseas leer:"

@@ -21,12 +21,12 @@ while true; do
     echo -e "Letra m o M Tu numero está fuera  del rango [5, 10] o dentro"
     echo -e "Letra l o L Desde el cero a un nº menos introducido"
 
-    read resultado
+    read -r resultado
 
     if [[ $resultado == [sS] ]]; then
         echo "Tu numero no es igual a 5 o si..."
         echo -n "Escribe un número: "
-        read valor
+        read -r valor
         # -ne: no igual
         if [[ $valor -ne 5 ]]; then
             echo "Tu numero no es igual a 5"
@@ -43,7 +43,7 @@ while true; do
         echo "Tu numero está fuera  del rango [5, 10] o dentro"
 
         echo -n "Escribe un número: "
-        read valor
+        read -r valor
         # -lt: menor que
         if [ "$valor" -lt 5 ] || [ "$valor" -gt 10 ]; then
             echo "Tu numero está fuera  del rango [5, 10]"
@@ -57,7 +57,7 @@ while true; do
         echo "Escribe un numero bucle For:"
         echo "Desde el cero a un nº menos introducido"
         echo -n "Escribe un número: "
-        read limite
+        read -r limite
 
         for ((i = 0; i < "$limite"; i++)); do
             echo $i
